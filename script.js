@@ -30,15 +30,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-function highlightRandomMovie() {
-    const movies = document.querySelectorAll('.movie');
-    const randomIndex = Math.floor(Math.random() * movies.length);
-    movies[randomIndex].style.border = '2px solid #ffcc00';
-    movies[randomIndex].style.boxShadow = '0 4px 8px rgba(255, 204, 0, 0.6)';
-}
-
-window.onload = highlightRandomMovie;
-
 
 function playVideo(event, containerId, videoUrl) {
     event.stopPropagation();  
