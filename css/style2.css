@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #202020;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+img {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: #b71c1c;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+#photo-gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;  
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox CSS */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.card {
+    perspective: 1000px; 
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    max-width: 300px; 
+    height: 400px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card-back {
+    background: #333;
+    color: #fff;
+    transform: rotateY(180deg); 
+}
+
+.card-inner.is-flipped {
+    transform: rotateY(180deg); 
+}
+
+.card-front img {
+    width: auto;                 
+    max-width: 100%;             
+    height: auto;               
+    max-height: 100%;           
+}
+
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip:focus {
+    top: 10px;
+}
+

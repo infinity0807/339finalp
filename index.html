@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Movies</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main" class="skip">Skip to Main Content</a>
+    <header>
+        <h1>Marvel Cinematic Universe</h1>
+    </header>
+    <div class="hero">
+        <h2>Welcome to the Marvel Movie Universe</h2>
+        <p>Explore the epic stories of your favorite heroes!</p>
+    </div>
+    <section id = "main" class="featured">
+        <h2>Featured Movies</h2>
+        <div class="movie-grid">
+            <article class="movie" id="iron-man">
+                <a href="iron-man.html" style="text-decoration: none; color: inherit;">
+                
+                    <h3>Iron Man (2008)</h3>
+                
+                    <p>The film that started it all. Follow Tony Stark's transformation into Iron Man.</p>
+                    
+                </a>
+                <div class="video-placeholder" id="ironManTrailer">
+                    <img src="images/icon.jpg" alt="Iron Man" style="width:100%;">
+                    <button onclick="playVideo(event, 'ironManTrailer', 'https://www.youtube.com/embed/8ugaeA-nMTc')">Play Trailer</button>
+                </div>
+            </article>
+            <article>
+                <a href="avengers.html" style="text-decoration: none; color: inherit;">
+                    <h3>The Avengers (2012)</h3>
+                    <p>Earth's mightiest heroes must unite against Loki and his alien army.</p>
+                </a>
+                <div class="video-placeholder" id="avengersTrailer">
+                    <img src="images/avengers.jpg" alt="The Avengers" style="width:100%;">
+                    <button onclick="playVideo(event, 'avengersTrailer', 'https://www.youtube.com/embed/eOrNdBpGMv8')">Play Trailer</button>
+                </div>
+            </article>
+
+            <article class="movie" id="captain-america">
+                <a href="captain-america.html" style="text-decoration: none; color: inherit;">
+                    <h3>Captain America: The First Avenger (2011)</h3>
+                    <p>Follow Steve Rogers' transformation from a frail young man into the iconic Captain America and his battle against the Nazi-led HYDRA.</p>
+                </a>
+                <div class="video-placeholder" id="captainAmericaTrailer">
+                    <img src="images/captain-icon.jpg" alt="Captain America" style="width:100%;">
+                    <button onclick="playVideo(event, 'captainAmericaTrailer', 'https://www.youtube.com/embed/JerVrbLldXw')">Play Trailer</button>
+                </div>
+            </article>
+            
+        </div>
+    </section>
+    <section class="upcoming">
+        <h2>Upcoming Releases</h2>
+        <div class="movie-grid">
+            <article>
+                <h3>Iron Man IV ???</h3>
+                <p>Is it a rumor?</p>
+            </article>
+            
+        </div>
+    </section>
+    <footer>
+        <p>Website created for Marvel Movie fans.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

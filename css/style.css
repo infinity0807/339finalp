@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url('../images/background.jpg');
+}
+
+header {
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero {
+    background-color: #0048ff;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #202020;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body, .hero {
+        padding: 20px;
+    }
+}
+
+.video-placeholder {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.video-placeholder img {
+    width: 100%;
+}
+
+.video-placeholder button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip:focus {
+    top: 10px;
+}
